@@ -1,0 +1,313 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* SIDEBAR SECTION */
+
+html, body {
+  height: 100%;
+
+  background: #e6e6e6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding-top: 1rem;
+
+  color: #e6db74;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  margin-top: 1rem;
+  padding-left: 2.5rem;
+}
+
+ul, ol {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* SIDEBAR SECTION */
+
+aside {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  vertical-align: top;
+  text-shadow: 2px 2px 2px #fff;
+
+  background: #e6e6e6;
+}
+
+aside h4 {
+  margin: 0;
+  padding: 10px 15px 0;
+
+  color: #828282;
+  font-size: 0.875rem;  /* 14/16 */
+  letter-spacing: -0.06rem;
+  text-transform: uppercase;
+}
+
+#menu li {
+  padding: 0 20px;
+
+  line-height: 1.7rem;
+  font-size: 0.875rem;  /* 14/16 */
+  cursor: pointer;
+}
+
+#menu li > a {
+  width: 100%;
+  display: inline-block;
+}
+
+#menu li > a::before {
+  position: relative;
+  left: -0.4rem;
+  top: -0.2rem;
+
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-right: 0.4rem;
+
+  vertical-align: middle;
+
+  border-right: 0.1rem solid black;
+  border-top: 0.1rem solid black;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  content: "";
+}
+
+#menu li.active {
+  color: #fff;
+  text-shadow: none;
+
+  outline: 1px solid #909090;
+  background: linear-gradient(to top, #a0a0a0, #b5b5b5);
+}
+
+#menu li.active > a::before {
+  transform: rotate(135deg);
+}
+
+#menu li.without-arrow > a::before {
+  border-color: transparent;
+}
+
+
+/* MAIN CONTENT SECTION */
+
+header {
+  position: relative;
+
+  height: 2.5rem;
+  padding-top: 0.5rem;
+
+  background: #171814;
+  border-bottom: 1px solid #3c3d39;
+}
+
+header .tab {
+  position: relative;
+  left: 40px;
+
+  height: 100%;
+  width: 160px;
+
+  padding: 0 20px;
+  
+  border: 1px solid #3c3d39;
+  border-bottom: 1px solid transparent;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(to top, #272822, #292929);
+}
+
+header:before,
+header:after,
+header .tab:before,
+header .tab:after {
+  position: absolute;
+  bottom: 0;
+
+  content: "";
+}
+
+header:before,
+header:after {
+  z-index: 1;
+  bottom: -1px;
+
+  width: 40px;
+  height: 40px;
+
+  background: #171814;
+  border-bottom: 1px solid #3c3d39;
+}
+
+header:before {
+  left: 2px;
+
+  border-radius: 0 0 30px/40px 0;
+}
+
+header:after {
+  left: 242px;
+
+  height: 60px;
+
+  border-radius: 0 0 0 40px/30px;
+}
+
+header .tab:before,
+header .tab:after {
+  width: 30px;
+  height: 30px;
+
+  background: #272822;
+}
+
+header .tab:before {
+  left: -30px;
+}
+
+header .tab:after {
+  right: -30px;
+}
+
+header .tab span {
+  font-family:  'Helvetica', 'Arial', sans-serif;
+  color: #fff;
+  font-size: 0.875rem;  /* 14/16 */
+  line-height:  2.5rem;
+}
+
+header .tab span.close-button {
+  float: right;
+  font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, monospace;
+}
+
+
+
+main {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 80%;
+  min-height: 100%;
+
+  font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, monospace;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #66d9ef;
+
+  background: #272822;
+}
+
+ol {
+  float: left;
+  margin: 0 1.25rem;
+  
+  /* Removing dot after list item number */
+  counter-reset: item;
+  list-style-type: none;
+}
+
+ol li {
+  height: 1rem;
+
+  color: #8f908a;
+}
+
+ol li:before {
+  /* Removing dot after list item number */
+  content: counter(item) " ";
+  counter-increment: item;
+}
+
+.toggleable-sections-container {
+  padding: 0 2.5rem;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+span.highlighted {
+  color: #f92672
+}
+
+span.variable {
+  color: #ae81ff;
+}
+
+
+@media only screen and (max-width: 600px){
+  aside {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    padding-top: 1.5rem;
+  }
+
+  main header,
+  main ol {
+    display: none;
+  }
+
+  section {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}

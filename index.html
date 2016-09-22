@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <aside>
+      <nav>
+      <h4>folders</h4>
+        <ul id="menu">
+          <li id="js-li">
+            <a>js</a>
+          </li>
+          <li id="styles-li">
+            <a>styles</a>
+          </li>
+          <li id="tests-li">
+            <a>tests</a>
+          </li>
+          <li id="eng-li">
+            <a>eng</a>
+          </li>
+          <li id="git-li" class="without-arrow">
+            <a>.gitignore</a>
+          </li>
+          <li id="readme-li" class="without-arrow">
+            <a>readme.txt</a>
+          </li>
+          <li id="index-li" class="without-arrow">
+            <a>index.html</a>
+          </li>
+        </ul>
+      </nav>
+    </aside><!--
+
+      Add this comment to remove the spaces between inline-block elements
+
+  --><main id="main" class="clearfix">
+      
+      <header>
+        <div class="tab">
+          <span id="file-name" class="name"></span>
+          <span class="close-button">x</span>
+        </div>
+      </header>
+      
+      <ol id="numbers-column"></ol>
+      <div class="toggleable-sections-container">
+
+        <section id="index" class="toggleable-sections">
+          <h2>Привет, меня зовут Рома.</h2>
+          <p>
+            Я - <span class="highlighted">фронт-енд разработчик</span>. Живу и совершаю свой трудовой подвиг в <span class="highlighted">Минске</span>.
+          </p>
+          <p>
+            Последние <span class="variable">400</span> дней, я работаю в одной общеизвестной транснациональной мегакорпорации. До этого, около года занимался бестолковым фрилансом.
+          </p>
+          <p>
+            Моя работа - моё главное хобби. Вне работы: саморазвитие в будни, саморазрушение в выходные; каллиграфия, книги, ММА.
+          </p>
+        </section>
+
+        <section id="js" class="toggleable-sections">
+          <h3>JavaScript.</h3>
+          <p>
+            Пишу на <span class="variable">JS</span> и мне нравиться.
+          </p>
+          <p>
+            Последний год работал над <span class="variable">SPA</span> основанном на <span class="highlighted">backbone</span>. В качестве библиотеки утилит использовали <span class="highlighted">lodash</span>. Могу использовать <span class="highlighted">jQuery</span>, впрочем, могу и не использовать.
+          </p>
+          <p>
+            Есть драматический опыт интеграции и болезненной кастомизации сторонних плагинов. Знаю, зачем в браузере есть <span class="variable">dev tool</span>.
+          </p>
+          <p>
+            Могу работать с данными <span class="highlighted">REST API. AJAX, JSON, Promise</span>, все дела.
+          </p>
+        </section>
+        
+        <section id="styles" class="toggleable-sections">
+          <h3>HTML, CSS и иже с ними.</h3>
+          <p>
+            Под хорошую музыку - хорошо верстаю.
+          </p>
+          <p>
+            Умею в валидную, семантическую вёрстку, после добавления веб префиксов и ревью в разных браузерах, даже, кроссбраузерную.
+          </p>
+          <p>
+            Знаю, чем блочные элементы отличаются от строчных, относительно чего позиционируется элемент с <span class="highlighted">position:</span> <span class="variable">absolute</span>, и как подчищать <span class="highlighted">float</span>'ы. Могу верстать "руками" или с помощью готовых сеток и фреймворков, <span class="highlighted">flexbox</span>. Если надо, готов вляпаться в табличную вёрстку или  <span class="variable">CSS3 Grid Layout</span>.
+          </p>
+          <p>
+            Письма верстать не люблю, какая бы хорошая музыка не играла.
+          </p>
+        </section>
+        
+        <section id="tests" class="toggleable-sections">
+          <h3>Unit tests.</h3>
+          <p>
+            Чё та, как-то не задалось у нас на проекте с этим. С десяток тестов написал, пару десятков подрихтовал - вот и весь мой скромный опыт <span class="variable">unit</span> тестирования. Но часы "увлекательнейшего" дебага в <span class="highlighted">karma</span>, оставили глубокую борозду в моём сердце.
+          </p>
+          <p>
+            Шутки шутками, но, в целом, понимаю - зачем это надо и хочу покрывать по полной.
+          </p>
+        </section>
+        
+        <section id="git" class="toggleable-sections">
+          <h3>Git</h3>
+          <p>
+            Умею в <span class="variable">git-bash</span>. Знаю, что значит <span class="highlighted">git rebase -i</span> и <span class="highlighted">git checkout -b killer-feature origin/master</span>
+          </p>
+          <p>
+            Понимаю, что смешного в фразе: May the <span class="variable">"--force"</span> be with you.
+          </p>
+        </section>
+        
+        <section id="readme" class="toggleable-sections">
+          <h3>В каком направлении хотелось бы развиваться?</h3>
+          <p>
+            <span class="highlighted">React</span>, <span class="highlighted">Angular2</span>.
+          </p>
+          <p>
+            Было бы здорово поработать на проекте с полноценным <span class="highlighted">TDD</span> или с просто развитой культурой покрытия своего кода тестами.
+          </p>
+          <p>
+            Прокачать бэк-энд скиллы - <span class="highlighted">Node</span> и <span class="highlighted">Express</span>, в частности, чтобы: быть способным брать любые задачи из бэклога, активно дискутировать с бэк-энд разработчиками во время обеда, и гордо налепить на ноут наклейку <span class="variable">"Full-stack developer"</span>.
+          </p>
+          <h3>Методология.</h3>
+          <p>
+            В команде мы использовали <span class="highlighted">scrum/agile</span> методологию разработки. Для борьбы с первозданным хаосом пользовались <span class="highlighted">jira</span>. Наш тимлид - помешанный на отладке и оптимизации гражданин, и процессы у нас были поставлены на высоком уровне. Да и, в целом, команда очень клёвая.
+          </p>
+        </section>
+        
+        <section id="eng" class="toggleable-sections">
+          <h3 class="highlighted">English.</h3>
+          <p>
+            Nu, srednen'ko tak znau. <span class="variable">B1/B1+</span>
+          </p>
+          <p>
+            Вполне хватает, чтобы задавать глупые вопросы <span class="highlighted">гуглу</span>, вникать в умные ответы на <span class="highlighted">stackoverflow</span>, читать документацию и мануалы к библиотекам и фреймворкам. Надеюсь, не намного отклонюсь от истины, если скажу, что и названия функциям и переменным, я придумываю, довольно лихо и метко.
+          </p>
+        </section>
+       
+        </div> <!-- .toggleable-sections-container  END -->
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
