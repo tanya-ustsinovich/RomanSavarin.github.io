@@ -1,4 +1,5 @@
-;(function () {
+;
+(function() {
 
   var menu = document.getElementById('menu');
   var main = document.getElementById('main');
@@ -9,7 +10,7 @@
     sectionToShow: 'index',
     fileName: 'index.html'
   };
-  
+
   menu.addEventListener('click', handleMenuClick);
   window.addEventListener('resize', onWindowResize);
 
@@ -20,7 +21,7 @@
     var chosenMenuItem = e.target.closest('li');
     var chosenMenuItemText = chosenMenuItem.innerText;
     var chosenMenuItemId = chosenMenuItem.id.replace('-li', '');
-    if(chosenMenuItem && chosenMenuItemId) {
+    if (chosenMenuItem && chosenMenuItemId) {
       highlightMenuItem(chosenMenuItem);
       passItemTextToTab(chosenMenuItemText);
       showChosenSection(chosenMenuItemId);
@@ -58,7 +59,7 @@
   };
 
   function addLinesNumbersColumn(activeSection) {
-    var linesAmount = activeSection.offsetHeight/getDefaultFontSize();
+    var linesAmount = activeSection.offsetHeight / getDefaultFontSize();
     removeElementsFromNode(ol);
     for (var i = 0; i < linesAmount; i++) {
       ol.appendChild(document.createElement('li'));
@@ -72,13 +73,13 @@
   };
 
   function getDefaultFontSize() {
-   var tempEl= document.createElement('div');
-   tempEl.style.cssText='font-size:1em; display:inline-block; padding:0; line-height:1; position:absolute; visibility:hidden;';
-   tempEl.appendChild(document.createTextNode('M'));
-   document.body.appendChild(tempEl);
-   var fontSize = tempEl.offsetHeight;
-   document.body.removeChild(tempEl);
-   return fontSize;
+    var tempEl = document.createElement('div');
+    tempEl.style.cssText = 'font-size:1em; display:inline-block; padding:0; line-height:1; position:absolute; visibility:hidden;';
+    tempEl.appendChild(document.createTextNode('M'));
+    document.body.appendChild(tempEl);
+    var fontSize = tempEl.offsetHeight;
+    document.body.removeChild(tempEl);
+    return fontSize;
   };
 
 })();
