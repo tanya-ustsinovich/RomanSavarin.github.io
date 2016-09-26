@@ -4,7 +4,7 @@
   var menu = document.getElementById('menu');
   var main = document.getElementById('main');
   var ol = document.getElementById('numbers-column');
-  var sectionsCollection = main.getElementsByClassName('toggleable-sections');
+  var sectionsCollection = document.querySelectorAll('.toggleable-sections');
 
   var START_PAGE = {
     sectionToShow: 'index',
@@ -18,7 +18,7 @@
   passItemTextToTab(START_PAGE.fileName);
 
   function handleMenuClick(e) {
-    var chosenMenuItem = e.target.closest('li');
+    var chosenMenuItem = getClosestLi(e.target);
     var chosenMenuItemText = chosenMenuItem.innerText;
     var chosenMenuItemId = chosenMenuItem.id.replace('-li', '');
     if (chosenMenuItem && chosenMenuItemId) {
@@ -33,6 +33,10 @@
     addLinesNumbersColumn(activeSection);
   };
 
+  function getClosestLi(elem) {
+    return elem.parentElement.tagName === "LI" ? elem.parentElement : getClosestLi(elem.parentElement);
+  };
+
   function highlightMenuItem(item) {
     makeActive(item, menu.children);
   };
@@ -42,7 +46,7 @@
   }
 
   function showChosenSection(selector) {
-    var sectionToShow = sectionsCollection.namedItem(selector);
+    var sectionToShow = document.getElementById(selector);
     makeActive(sectionToShow, sectionsCollection);
     addLinesNumbersColumn(sectionToShow);
   };

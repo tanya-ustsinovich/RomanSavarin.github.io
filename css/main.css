@@ -116,6 +116,7 @@ aside h4 {
 
   content: '';
   transition: -webkit-transform 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease;
   transition:         transform 0.2s ease;
   transition:         transform 0.2s ease, -webkit-transform 0.2s ease;
   -webkit-transform: rotate(45deg);
@@ -130,6 +131,7 @@ aside h4 {
 #menu li.active {
   color: #FFF;
   outline: 1px solid #909090;
+  background: -webkit-linear-gradient(bottom, #A0A0A0, #B5B5B5);
   background: linear-gradient(to top, #A0A0A0, #B5B5B5);
   text-shadow: none;
 }
@@ -168,6 +170,7 @@ header .tab {
   border: 1px solid #3C3D39;
   border-bottom: 1px solid transparent;
   border-radius: 14px 14px 0 0;
+  background: -webkit-linear-gradient(bottom, #272822, #292929);
   background: linear-gradient(to top, #272822, #292929);
 }
 
